@@ -54,6 +54,23 @@
     //         echo ", Harus Ikut Remedial";
     //     }
     // }
+
+    echo "<hr>";
+    ##### SWITCH #######
+    $hari = 10;
+    switch($hari){
+        case 1:
+            echo "Hari Minggu";
+            break;
+        
+        case 2:
+            echo "Hari Senin";
+            break;
+        
+        default:
+            echo "Tidak Ada Hari";
+            break;
+    }
     ?>
 </body>
 </html>
