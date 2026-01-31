@@ -76,12 +76,39 @@ $data = mysqli_fetch_array($edit);
                                 </div>
                             </div>
                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Gelombang</label>
+                                <select class="form-control" name="gelombang" id="">
+                                    <option value="">-Pilih Gelombang-</option>
+                                    <?php 
+                                        //kode untuk looping datat jurusan
+                                        include_once('../koneksi.php');
+                                        $qry_gelombang = "SELECT * FROM gelombang";
+                                        $data_gelombang = mysqli_query($koneksi,$qry_gelombang);
+                                        foreach($data_gelombang as $item_gelombang){
+                                    ?>
+                                    <option <?php echo $data['gelombangs_id'] == $item_gelombang['id'] ? 'selected' : '' ?> value="<?=$item_gelombang['id']?>"><?=$item_gelombang['kode']?> - <?=$item_gelombang['nama_gelombang']?></option>
+                                    <?php
+                                        //penutup kode looping jurusan
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Jurusan</label>
                                 <select class="form-control" name="jur" id="">
                                     <option value="">-Pilih Jurusan-</option>
-                                    <option <?php echo $data['jur']=='IPA' ? 'selected' : '' ?> value="IPA">IPA</option>
-                                    <option <?php echo $data['jur']=='IPS' ? 'selected' : '' ?> value="IPS">IPS</option>
-                                    <option <?php echo $data['jur']=='Bahasa' ? 'selected' : '' ?> value="Bahasa">Bahasa</option>
+                                    <?php 
+                                        //kode untuk looping datat jurusan
+                                        include_once('../koneksi.php');
+                                        $qry_jur = "SELECT * FROM jurusan";
+                                        $data_jur = mysqli_query($koneksi,$qry_jur);
+                                        foreach($data_jur as $item_jur){
+                                    ?>
+                                    <option <?php echo $data['jurusans_id'] == $item_jur['id'] ? 'selected' : '' ?> value="<?=$item_jur['id']?>"><?=$item_jur['kode']?> - <?=$item_jur['nama_jurusan']?></option>
+                                    <?php
+                                        //penutup kode looping jurusan
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="mb-3">

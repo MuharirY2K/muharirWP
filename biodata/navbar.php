@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color:#005e10" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg" style="background-color:#1DCD9F" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="http://localhost/muharirWP/biodata/">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -16,6 +16,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="http://localhost/muharirWP/biodata/dosen/">Dosen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost/muharirWP/biodata/gelombang/">Gelombang</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
