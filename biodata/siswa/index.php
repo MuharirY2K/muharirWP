@@ -42,7 +42,7 @@
                                 include("../koneksi.php");
 
                                 #2. menulikan query menampilkan data
-                                $qry = "SELECT *, biodata.id AS ids FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id";
+                                $qry = "SELECT *, biodata.id AS ids FROM biodata INNER JOIN jurusan ON biodata.jurusans_id = jurusan.id INNER JOIN gelombang ON biodata.gelombangs_id = gelombang.id";
 
                                 #3. menjalankan query
                                 $tampil = mysqli_query($koneksi,$qry);
@@ -107,7 +107,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Gelombang</td>
-                                                        <th scope="row"><?=$data['gelombangs_id']?></th>
+                                                        <th scope="row"><?=$data['nama_gelombang']?></th>
                                                     </tr>
 
                                                 </tbody>
